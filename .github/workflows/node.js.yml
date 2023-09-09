@@ -30,7 +30,7 @@ jobs:
         run: |
           # Replace with your deployment script or command
           echo "Deploying to Staging"
-          echo ${{ secrets.DEV_DEPLOY_URL }}
+          cd /home/ec2/workspace/deploy-with-github-actions/_work/dev
           npm ci
 
       - name: Deploy to Production
@@ -38,5 +38,5 @@ jobs:
         run: |
           # Replace with your deployment script or command
           echo "Deploying to Production"
-          echo ${{ secrets.PROD_DEPLOY_URL }}
+          cd /home/ec2/workspace/deploy-with-github-actions/_work/prod
           npm ci
