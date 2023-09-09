@@ -31,7 +31,7 @@ jobs:
           # Replace with your deployment script or command
           echo "Deploying to Staging"
           cd /home/ec2-user/workspace/deploy-with-github-actions/_work/dev
-          npm ci
+          npm i
 
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main'
@@ -39,4 +39,4 @@ jobs:
           # Replace with your deployment script or command
           echo "Deploying to Production"
           cd /home/ec2-user/workspace/deploy-with-github-actions/_work/prod
-          npm ci
+          npm i
