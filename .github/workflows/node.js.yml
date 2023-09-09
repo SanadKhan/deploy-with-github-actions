@@ -27,18 +27,10 @@ jobs:
 
       - name: Deploy to Staging
         if: github.ref == 'refs/heads/dev'
-        run: |
-          # Replace with your deployment script or command
-          echo "Deploying to Staging"
-          cd /home/ec2-user/workspace/deploy-with-github-actions/_work/dev
-          git pull origin dev
+        run: 
           npm i
 
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main'
-        run: |
-          # Replace with your deployment script or command
-          echo "Deploying to Production"
-          cd /home/ec2-user/workspace/deploy-with-github-actions/_work/prod
-          git pull origin main
+        run: 
           npm i
