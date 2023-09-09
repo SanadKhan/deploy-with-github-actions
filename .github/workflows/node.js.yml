@@ -3,7 +3,6 @@ name: Deploy on Push
 on:
   push:
     branches:
-      - dev
       - main
 
 jobs:
@@ -16,7 +15,6 @@ jobs:
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
-
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -25,12 +23,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Deploy to Staging
-        if: github.ref == 'refs/heads/dev'
-        run: 
-          npm i
-
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/main'
-        run: 
-          npm i
+      - run: 
+          npm ci
