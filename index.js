@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
   res.send({"msg": 'Running from backend!'})
 });
 
-app.listen(3000, () => {
-  console.log("App is running on 3000")
+app.listen(4000, () => {
+  console.log("App is running on 4000")
 })
