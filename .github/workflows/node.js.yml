@@ -30,7 +30,7 @@ jobs:
         run: |
           # Replace with your deployment script or command
           echo "Deploying to Staging"
-          cd /home/ec2/workspace/deploy-with-github-actions/_work/dev
+          cd /home/ec2-user/workspace/deploy-with-github-actions/_work/dev
           npm ci
 
       - name: Deploy to Production
@@ -38,5 +38,5 @@ jobs:
         run: |
           # Replace with your deployment script or command
           echo "Deploying to Production"
-          cd /home/ec2/workspace/deploy-with-github-actions/_work/prod
+          cd /home/ec2-user/workspace/deploy-with-github-actions/_work/prod
           npm ci
